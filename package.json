@@ -5,6 +5,9 @@
   "repository": "git@github.com:matthewnitschke/cron-timeout.git",
   "author": "Matthew <matthewcnitschke@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
