@@ -2,7 +2,7 @@
 
 module.exports = {
     cronTimeout: (callback, time) => {
-        parseTime(time)
+
     },
     cronInterval: (callback, time) => {
 
@@ -29,6 +29,13 @@ module.exports = {
             return date
         } else {
             throw new Error(`Invalid time input, got: '${time}', expected format: 'h:mma'`)
+        }
+    },
+    getMillsDiff(a, b){
+        if (a.getTime() > b.getTime()) {
+            return a.getTime() - b.getTime()
+        } else {
+            return b.getTime() - a.getTime()
         }
     }
 }
