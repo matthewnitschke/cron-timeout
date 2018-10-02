@@ -1,6 +1,11 @@
 const { expect } = require('chai')
 
-const { cronTimeout, cronInterval, parseTime } = require('../src/cron-timeout.js')
+const { cronTimeout, cronInterval, parseTime, getMillsDiff } = require('../src/cron-timeout.js')
+
+const msInDay = 86400000
+const msInHour = 3600000
+const msInMin = 60000
+const msInSec = 1000
 
 function looseDateEquality(a, b){
     a.setMilliseconds(0)
@@ -36,4 +41,9 @@ describe('Tests', () => {
         looseDateEquality(parseTime('12:00 am'), date)
         looseDateEquality(parseTime('12:00 am'), date)
     })
+
+    it('should test time diffing', () => {
+        expect(getMillsDiff(parseTime('8:30am'), parseTime('7:30am'))).to.be.equal(msInHour)
+        expect(getMillsDiff(parseTime('11:30am'), parseTime('1:30pm'))).to.be.equal(2 * msInHour)
+    });
 })
