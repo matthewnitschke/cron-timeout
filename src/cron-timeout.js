@@ -2,10 +2,10 @@
 
 module.exports = {
     cronTimeout: (callback, time) => {
-
+        setTimeout(callback, this.getMillsDiff(this.parseTime(time), new Date()))
     },
     cronInterval: (callback, time) => {
-
+        setInterval(callback, this.getMillsDiff(this.parseTime(time), new Date()))
     },
     parseTime: (time) => {
         // time will be in the format h:mma
