@@ -15,6 +15,7 @@ function looseDateEquality(a, b){
 }
 
 describe('Tests', () => {
+
     it('should test time parsing', () => {
         let date = new Date()
         date.setHours(7)
