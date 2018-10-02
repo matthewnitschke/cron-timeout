@@ -1,0 +1,12 @@
+{
+  "name": "cron-timeout",
+  "version": "1.0.0",
+  "main": "src/cron-timeout.js",
+  "repository": "git@github.com:matthewnitschke/cron-timeout.git",
+  "author": "Matthew <matthewcnitschke@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
